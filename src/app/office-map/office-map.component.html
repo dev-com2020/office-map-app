@@ -2,14 +2,18 @@
   <header><img src="assets\logo-alx.png"/>
   <p>classroom navigator v. 0.1b</p></header>
   <div id="map-container">
-    <svg width="600" height="400">
+    <svg width="400" height="600">
+        <rect x="230" y="175" fill="transparent" stroke-width="2" width="100" height="50" stroke="black"/>
+        <rect x="150" y="300" fill="transparent" stroke-width="2" width="50" height="50" stroke="black"/>
+        <text x="156" y="330">kawa</text>
+        <path id="416" d="M200,300 L200,200 L230,200" stroke="black" stroke-width="2" fill="none"/>
+        <text x="240" y="205">416</text>
+        <path id="xxx" d="M200,300 L200,200 L170,200" stroke="black" stroke-width="2" fill="none"/>
         
-        <path id="path1" d="M100,100 L200,100 L200,200" stroke="black" stroke-width="2" fill="none"/>
-        <path id="path2" d="M200,100 L300,100 L300,200" stroke="black" stroke-width="2" fill="none"/>
       
       </svg>
   </div>
 <nav>
-  <button (click)="animateRoute('path1')">Animuj trasę do Pokoju 1</button>
-  <button (click)="animateRoute('path2')">Animuj trasę do Pokoju 2</button>
+  <button (click)="animateRoute('416')">Pokój 416</button>
+  <button (click)="animateRoute('xxx')">Pokój xxx</button>
 </nav>

@@ -45,7 +45,7 @@ export class OfficeMapComponent implements OnInit {
 
       // Animacja (możesz dostosować czas trwania i opóźnienie)
       circle.style.opacity = '0';
-      circle.style.transition = `opacity 0.5s ease ${i * 0.02}s`; // Dostosuj dla płynniejszej animacji
+      circle.style.transition = `opacity 0.5s ease ${i * 0.01}s`; // Dostosuj dla płynniejszej animacji
       setTimeout(() => circle.style.opacity = '1', i * 5);
       
   }
