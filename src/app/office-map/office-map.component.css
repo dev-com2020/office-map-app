@@ -1,0 +1,8 @@
+/* src/app/office-map/office-map.component.css */
+#map-container {
+    border: 1px solid black;
+    width: 100%;
+    height: 400px; /* Dostosuj do swoich potrzeb */
+    margin-top: 20px;
+  }
+  
