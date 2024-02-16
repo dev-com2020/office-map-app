@@ -1,8 +1,47 @@
-/* src/app/office-map/office-map.component.css */
+
 #map-container {
     border: 1px solid black;
     width: 100%;
-    height: 400px; /* Dostosuj do swoich potrzeb */
+    height: 600px; 
     margin-top: 20px;
   }
   
+  nav {
+    display: flex;
+    justify-content:left;
+    padding: 10px;
+  }
+  
+  nav button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  
+  nav button:hover {
+    background-color: #458fa0;
+  }
+
+  header {
+    background-color: #2d363a;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  p {
+    color: azure;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    padding-right: 10px;
+  }
+
