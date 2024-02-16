@@ -20,7 +20,7 @@ header {
   border-radius: 5px;
   box-shadow: 0 10px 15px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   width: 410px;
-  height: 620px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,8 +48,7 @@ header {
 }
   
   nav {
-    display: flex;
-    justify-content:left;
+    display:flexbox;
     padding: 10px;
     
   }
