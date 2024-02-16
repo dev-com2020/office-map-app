@@ -21,11 +21,11 @@
 }
 
 #map-container rect {
-  fill: #4CAF50;
+  fill: #a0a6a9;
 }
 
 #map-container path {
-  stroke: #4CAF50;
+  stroke: #315782;
 }
   
   nav {
@@ -67,3 +67,12 @@
     padding-right: 10px;
   }
 
+  @keyframes flash {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  .flash {
+    animation: flash 1s infinite;
+  }

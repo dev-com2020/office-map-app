@@ -2,18 +2,41 @@
   <header><img src="assets\logo-alx.png"/>
   <p>classroom navigator v. 0.1b</p></header>
   <div id="map-container">
-    <svg width="400" height="600">
-        <rect x="230" y="175" fill="transparent" stroke-width="2" width="100" height="50" stroke="black"/>
-        <rect x="150" y="300" fill="transparent" stroke-width="2" width="50" height="50" stroke="black"/>
-        <text x="156" y="330">kawa</text>
-        <path id="416" d="M200,300 L200,200 L230,200" stroke="black" stroke-width="2" fill="none"/>
-        <text x="240" y="205">416</text>
-        <path id="xxx" d="M200,300 L200,200 L170,200" stroke="black" stroke-width="2" fill="none"/>
-        
+    <svg width="400" height="800">
+    
+      <path id="401ab" d="M200,500 L200,250 L230,250" stroke="black" stroke-width="2" fill="none"/>
+      <rect x="230" y="220" fill="transparent" stroke-width="2" width="100" height="100" stroke="black"/>
+      <text x="250" y="300">401a/401b</text>
+
+      <rect x="125" y="500" fill="transparent" stroke-width="2" width="70" height="60" stroke="black"/>
+      <circle class="flash" cx="185" cy="550" r="5" fill="red"/>
+      <text x="135" y="530">tu jesteś</text>
+
+      <rect x="230" y="500" fill="transparent" stroke-width="2" width="100" height="50" stroke="black"/>
+      <text x="250" y="530">windy</text>
       
-      </svg>
+      <path id="408" d="M200,500 L200,400 L230,400" stroke="black" stroke-width="2" fill="none"/>
+      <rect x="230" y="325" fill="transparent" stroke-width="2" width="100" height="100" stroke="black"/>
+      <text x="250" y="405">408/407</text>
+
+      <path id="411" d="M200,500 L200,500 L200,600" stroke="black" stroke-width="2" fill="none"/>
+      <rect x="170" y="600" fill="transparent" stroke-width="2" width="80" height="100" stroke="black"/>
+      <text x="200" y="630">411</text>
+
+      <path id="412" d="M200,580 L300,580 L300,600" stroke="black" stroke-width="2" fill="none"/>
+      <rect x="270" y="580" fill="transparent" stroke-width="2" width="80" height="110" stroke="black"/>
+      <text x="290" y="630">412</text>
+
+      <path id="401" d="M200,580 L100,580 L100,600" stroke="black" stroke-width="2" fill="none"/>
+      <rect x="70" y="580" fill="transparent" stroke-width="2" width="80" height="110" stroke="black"/>
+      <text x="100" y="630">401</text>
+
+  </svg>
   </div>
 <nav>
-  <button (click)="animateRoute('416')">Pokój 416</button>
-  <button (click)="animateRoute('xxx')">Pokój xxx</button>
+  <button (click)="animateRoute('408')">Pokój 408/407</button>
+  <button (click)="animateRoute('401ab')">Pokój 401a/401b</button>
+  <button (click)="animateRoute('411')">Pokój 411</button>
+  <button (click)="animateRoute('412')">Pokój 412</button>
+  <button (click)="animateRoute('401')">Pokój 401</button>
 </nav>
