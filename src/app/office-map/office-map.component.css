@@ -28,6 +28,65 @@ header {
   fill: #fbf8bf !important;
 }
 
+.box {
+  width: 270px; /* Adjust the width as necessary */
+  margin-top: 10px;
+  padding: 60px;
+  background-color: #ffffff; /* Assuming white background */
+  border: 1px solid #cccccc; /* Light grey border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center; /* Centering the text */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box h2 {
+  margin-top: 0;
+  color: #333333; /* Dark grey color for text */
+  font-size: 20px; /* Adjust the size as necessary */
+  font-weight: bold;
+}
+
+.box hr {
+  border: none;
+  height: 1px;
+  background-color: #cccccc; /* Light grey line */
+  margin: 10px 0; /* Spacing above and below the line */
+}
+
+.box p {
+  color: #666666; /* Medium grey for the paragraph */
+  font-size: 17px; /* Adjust the size as necessary */
+}
+
+.box ul {
+  list-style: none; /* Removing bullet points */
+  padding: 0;
+  margin: 10px 0; /* Spacing above and below the list */
+}
+
+.box ul li {
+  color: #333333; /* Dark grey for list items */
+  font-size: 15px; /* Adjust the size as necessary */
+  line-height: 1.6; /* Spacing between lines */
+}
+
+.box button {
+  background-color: #007bff; /* Blue background for the button */
+  color: #ffffff; /* White text for the button */
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase; /* Uppercase button text */
+  font-weight: bold;
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Hand cursor on hover */
+  margin-top: 10px; /* Spacing above the button */
+}
+
+.box button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
 
 #map-container svg {
   stroke: #2d363a;
