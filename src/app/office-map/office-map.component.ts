@@ -12,6 +12,17 @@ import { CommonModule } from '@angular/common';
 export class OfficeMapComponent implements OnInit {
 
   pathId = ''
+  isClicked = false;
+  clickedId = ''
+
+  onClick(id: string) {
+    this.clickedId = id;
+  }
+
+  onBlur() {
+    this.isClicked = false;
+  }
+
   constructor() {
   }
 

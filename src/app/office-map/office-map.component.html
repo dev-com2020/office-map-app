@@ -2,10 +2,11 @@
   <header><img src="assets\logo-alx.png"/>
   <p>classroom navigator v. 0.3b</p></header>
   <div id="map-container">
-    <svg width="400" height="1540">
+    <!-- <svg width="400" height="1540"> -->
+      <svg width="360" height="1540">
   
       <path id="405" d="M200,900 L200,650 L230,650" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('405')" x="230" y="620" fill="transparent" stroke-width="3" width="100" height="100" stroke="black"/>
+      <rect (click)="animateRoute('405'); onClick('405')" (blur)="onBlur()" x="230" y="620" fill="transparent" stroke-width="3" width="100" height="100" stroke="black"/>
       <text x="250" y="700">405</text>
   
       <rect x="120" y="900" fill="transparent" stroke-width="3" width="70" height="60" stroke="black"/>
@@ -16,23 +17,23 @@
       <text x="125" y="840">łazienka</text>
   
       <path id="biuro" d="M200,900 L200,800 L110,800 L110,760 L100,760" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('biuro')" x="0" y="720" fill="transparent" stroke-width="3" width="100" height="60" stroke="black"/>
+      <rect (click)="animateRoute('biuro'); onClick('biuro')" (blur)="onBlur()" tabindex="0" [ngClass]="{'clicked': isClicked && clickedId === 'biuro'}" x="0" y="720" fill="transparent" stroke-width="3" width="100" height="60" stroke="black"/>
       <text x="50" y="750">biuro</text>
   
       <path id="406" d="M200,900 L200,800 L110,800 L110,760 L100,760" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('406')" x="0" y="650" fill="transparent" stroke-width="3" width="100" height="60" stroke="black"/>
+      <rect (click)="animateRoute('406'); onClick('406')" (blur)="onBlur()" tabindex="0" [ngClass]="{'clicked': isClicked && clickedId === '406'}" x="0" y="650" fill="transparent" stroke-width="3" width="100" height="60" stroke="black"/>
       <text x="50" y="680">406</text>
   
       <path id="407" d="M200,900 L200,800 L110,800 L110,760 L100,760" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('407')" x="0" y="580" fill="transparent" stroke-width="3" width="100" height="60" stroke="black"/>
+      <rect (click)="animateRoute('407'); onClick('407')" (blur)="onBlur()" x="0" y="580" fill="transparent" stroke-width="3" width="100" height="60" stroke="black"/>
       <text x="50" y="620">407</text>
   
       <path id="408" d="M200,900 L200,800 L110,800 L110,760 L100,760" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('408')" x="0" y="510" fill="transparent" stroke-width="3" width="100" height="60" stroke="black"/>
+      <rect (click)="animateRoute('408'); onClick('408')" (blur)="onBlur()" x="0" y="510" fill="transparent" stroke-width="3" width="100" height="60" stroke="black"/>
       <text x="50" y="550">408</text>
   
       <path id="409" d="M200,900 L200,800 L110,800 L110,760 L100,760" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('409')" x="0" y="440" fill="transparent" stroke-width="3" width="130" height="60" stroke="black"/>
+      <rect (click)="animateRoute('409'); onClick('409')" (blur)="onBlur()" x="0" y="440" fill="transparent" stroke-width="3" width="130" height="60" stroke="black"/>
       <text x="50" y="475">409</text>
   
       <rect x="120" y="720" fill="transparent" stroke-width="3" width="70" height="60" stroke="black"/>
@@ -45,24 +46,24 @@
       <text x="250" y="865">szatnia</text>
       
       <path id="404" d="M200,900 L200,800 L230,800" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('404')" x="230" y="725" fill="transparent" stroke-width="3" width="100" height="100" stroke="black"/>
+      <rect (click)="animateRoute('404'); onClick('404')" (blur)="onBlur()" x="230" y="725" fill="transparent" stroke-width="3" width="100" height="100" stroke="black"/>
       <text x="250" y="805">404</text>
   
       <path id="403" d="M200,900 L200,900 L200,1000" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('403')" x="170" y="1000" fill="transparent" stroke-width="3" width="80" height="100" stroke="black"/>
+      <rect (click)="animateRoute('403'); onClick('403')" (blur)="onBlur()" x="170" y="1000" fill="transparent" stroke-width="3" width="80" height="100" stroke="black"/>
       <text x="200" y="1030">403</text>
   
       <path id="402" d="M200,980 L300,980 L300,1000" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('402')" x="270" y="980" fill="transparent" stroke-width="3" width="80" height="110" stroke="black"/>
+      <rect (click)="animateRoute('402'); onClick('402')" (blur)="onBlur()" x="270" y="980" fill="transparent" stroke-width="3" width="80" height="110" stroke="black"/>
       <text x="290" y="1030">402</text>
   
       <path id="401" d="M200,980 L100,980 L100,1000" stroke="black" stroke-width="3" fill="none"/>
-      <rect (click)="animateRoute('401')" x="70" y="980" fill="transparent" stroke-width="3" width="80" height="110" stroke="black"/>
+      <rect (click)="animateRoute('401'); onClick('401')" (blur)="onBlur()" x="70" y="980" fill="transparent" stroke-width="3" width="80" height="110" stroke="black"/>
       <text x="100" y="1030">401</text>
   
   </svg>
   </div>
-<nav>
+<!-- <nav>
   <button (click)="animateRoute('405')">Pokój 405</button>
   <button (click)="animateRoute('404')">Pokój 404</button>
   <button (click)="animateRoute('402')">Pokój 402</button>
@@ -73,4 +74,4 @@
   <button (click)="animateRoute('407')">Pokój 407</button>
   <button (click)="animateRoute('408')">Pokój 408</button>
   <button (click)="animateRoute('409')">Pokój 409</button>
-</nav>
+</nav> -->
