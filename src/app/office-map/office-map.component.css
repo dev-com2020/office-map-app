@@ -5,10 +5,10 @@ header {
   align-items: center;
   margin-bottom: 10px;
   border-radius: 5px;
-  width: 380px;
+  width: 100%; /* Zmiana na 100%, aby rozciągać się na całą szerokość ekranu */
+  max-width: 380px; /* Maksymalna szerokość dla większych ekranów */
   display: flex;
   justify-content: center;
-
 }
 
 #map-container {
@@ -17,8 +17,10 @@ header {
   background-position: center;
   border-radius: 5px;
   box-shadow: 0 10px 15px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  width: 390px;
+  width: 100%; /* Ustawione na 100% dla lepszej responsywności */
+  max-width: 390px; /* Maksymalna szerokość dla zachowania proporcji */
   height: 700px;
+  aspect-ratio: 9 / 16; /* Zachowanie proporcji obrazu */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,15 +31,16 @@ header {
 }
 
 .box {
-  width: 270px; /* Adjust the width as necessary */
+  width: 77%; /* Aby element 'box' był responsywny */
+  max-width: 390px; /* Maksymalna szerokość dla zachowania czytelności */
   margin-top: 10px;
-  padding: 60px;
-  background-color: #ffffff; /* Assuming white background */
-  border: 1px solid #cccccc; /* Light grey border */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  text-align: center; /* Centering the text */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 40px; /* Zmniejszona wartość paddingu dla mniejszych ekranów */
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Verdana', 'Geneva', 'Tahoma', 'sans-serif';
 }
 
 .box h2 {
@@ -87,48 +90,31 @@ header {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
-
-#map-container svg {
-  stroke: #2d363a;
-}
-
-#map-container text {
-  fill: #2d363a;
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-}
-
-#map-container rect {
-  fill: #a0a6a9;
-}
-
-#map-container path {
-  stroke: #c27e16;
+  
+nav {
+  display: flex; /* Zmiana na flex, aby lepiej zarządzać przestrzenią */
+  flex-wrap: wrap; /* Pozwala elementom przechodzić do nowej linii */
+  padding: 10px;
+  justify-content: center; /* Wyśrodkowanie przycisków na mniejszych ekranach */
 }
   
-  nav {
-    display:flexbox;
-    padding: 10px;
-    
-  }
+nav button {
+  background-color: #2d363a;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
   
-  nav button {
-    background-color: #2d363a; 
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-  }
-  
-  nav button:hover {
-    background-color: #458fa0;
-  }
+nav button:hover {
+  background-color: #458fa0;
+}
 
   p {
     color: azure;
@@ -137,12 +123,42 @@ header {
     padding-right: 10px;
   }
 
-  @keyframes flash {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 1;}
-  }
+  /* Styl dla ścieżek */
+#map-container svg path {
+  stroke: #007bff; /* Jasny niebieski dla lepszej widoczności */
+  stroke-width: 4; /* Grubsze linie dla lepszej widoczności */
+}
 
-  .flash {
-    animation: flash 1s infinite;
-  }
+/* Styl dla prostokątów */
+#map-container svg rect {
+  fill: #f8f9fa; /* Jasne tło */
+  stroke: #007bff; /* Niebieskie obramowanie */
+  stroke-width: 2; /* Cieńsze linie dla subtelności */
+  transition: fill 0.3s ease; /* Gładkie przejście koloru tła */
+}
+
+/* Styl dla tekstu */
+#map-container svg text {
+  fill: #343a40; /* Ciemniejszy kolor dla lepszej czytelności */
+  font-size: 14px; /* Dostosowany rozmiar czcionki */
+  font-family: Arial, sans-serif; /* Nowoczesna czcionka */
+}
+
+/* Styl dla efektów hover na prostokątach */
+#map-container svg rect:hover {
+  fill: #007bff; /* Zmiana koloru tła przy najechaniu */
+  cursor: pointer; /* Kursor wskazujący interaktywność */
+}
+
+/* Styl dla 'flash' - dynamiczny efekt dla ważnych punktów */
+.flash {
+  fill: red; /* Bardziej intensywny kolor */
+  animation: flash 1.5s infinite; /* Dłuższa animacja dla lepszej widoczności */
+}
+
+/* Zachowanie animacji 'flash' */
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; } /* Lżejsze zanikanie dla subtelnego efektu */
+}
+
